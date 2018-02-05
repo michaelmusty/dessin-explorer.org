@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>dessin-explorer</title>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- VISJS -->
+    <script type="text/javascript" src="vis.min.js"></script>
+    <link type="text/css" href="vis-network.min.css">
+    <!-- CSS -->
+    <link href="entireframework.min.css" rel="stylesheet" type="text/css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- MATHJAX -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <!-- STYLE -->
+    <style type="text/css">
+      html, body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #mynetwork {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #444444;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav" onclick="this.focus()">
+      <div class="container">
+        <a class="pagename current" href="index.html">dessin explorer</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <a class="btn btn-sm smooth" href="PP1-graph.html">\(\mathbf{P}^1\)</a>
+      </div>
+    </div>
+    <div class="container">
+      <h3>2T1</h3>
+      <a class="btn btn-sm smooth" href="2T1-1,2,2-g0-graph.html">2T1-1,2,2-g0</a>
+      <a class="btn btn-sm smooth" href="2T1-2,1,2-g0-graph.html">2T1-2,1,2-g0</a>
+      <a class="btn btn-sm smooth" href="2T1-2,2,1-g0-graph.html">2T1-2,2,1-g0</a>
+    </div>
+    <div class="container">
+      <h3>4T1</h3>
+      <a class="btn btn-sm smooth" href="4T1-4,4,2-g1-graph.html">4T1-4,4,2-g1</a>
+      <a class="btn btn-sm smooth" href="4T1-1,4,4-g0-graph.html">4T1-1,4,4-g0</a>
+      <a class="btn btn-sm smooth" href="4T1-4,2,4-g1-graph.html">4T1-4,2,4-g1</a>
+      <a class="btn btn-sm smooth" href="4T1-2,4,4-g1-graph.html">4T1-2,4,4-g1</a>
+      <a class="btn btn-sm smooth" href="4T1-4,1,4-g0-graph.html">4T1-4,1,4-g0</a>
+      <a class="btn btn-sm smooth" href="4T1-4,4,1-g0-graph.html">4T1-4,4,1-g0</a>
+    </div>
+    <div class="container">
+      <h3>4T2</h3>
+      <a class="btn btn-sm smooth" href="4T2-2,2,2-g0-graph.html">4T2-2,2,2-g0</a>
+    </div>
+    <div class="container">
+      <h3>8T1</h3>
+      <a class="btn btn-sm smooth" href="8T1-8,4,8-g3-graph.html">8T1-8,4,8-g3</a>
+      <a class="btn btn-sm smooth" href="8T1-2,8,8-g2-graph.html">8T1-2,8,8-g2</a>
+      <a class="btn btn-sm smooth" href="8T1-4,8,8-g3-graph.html">8T1-4,8,8-g3</a>
+      <a class="btn btn-sm smooth" href="8T1-1,8,8-g0-graph.html">8T1-1,8,8-g0</a>
+      <a class="btn btn-sm smooth" href="8T1-8,8,2-g2-graph.html">8T1-8,8,2-g2</a>
+      <a class="btn btn-sm smooth" href="8T1-8,8,1-g0-graph.html">8T1-8,8,1-g0</a>
+      <a class="btn btn-sm smooth" href="8T1-8,1,8-g0-graph.html">8T1-8,1,8-g0</a>
+      <a class="btn btn-sm smooth" href="8T1-8,2,8-g2-graph.html">8T1-8,2,8-g2</a>
+      <a class="btn btn-sm smooth" href="8T1-8,8,4-g3-graph.html">8T1-8,8,4-g3</a>
+    </div>
+    <div class="container">
+      <h3>8T2</h3>
+      <a class="btn btn-sm smooth" href="8T2-2,4,4-g1-graph.html">8T2-2,4,4-g1</a>
+      <a class="btn btn-sm smooth" href="8T2-4,2,4-g1-graph.html">8T2-4,2,4-g1</a>
+      <a class="btn btn-sm smooth" href="8T2-4,4,2-g1-graph.html">8T2-4,4,2-g1</a>
+    </div>
+    <div class="container">
+      <h3>8T4</h3>
+      <a class="btn btn-sm smooth" href="8T4-4,2,2-g0-graph.html">8T4-4,2,2-g0</a>
+      <a class="btn btn-sm smooth" href="8T4-2,4,2-g0-graph.html">8T4-2,4,2-g0</a>
+      <a class="btn btn-sm smooth" href="8T4-2,2,4-g0-graph.html">8T4-2,2,4-g0</a>
+    </div>
+    <div class="container">
+      <h3>8T5</h3>
+      <a class="btn btn-sm smooth" href="8T5-4,4,4-g2-graph.html">8T5-4,4,4-g2</a>
+    </div>
+    <div class="container">
+      <h3>16T1</h3>
+      <a class="btn btn-sm smooth" href="16T1-4,16,16-g6-graph.html">16T1-4,16,16-g6</a>
+      <a class="btn btn-sm smooth" href="16T1-16,2,16-g4-graph.html">16T1-16,2,16-g4</a>
+      <a class="btn btn-sm smooth" href="16T1-16,4,16-g6-graph.html">16T1-16,4,16-g6</a>
+      <a class="btn btn-sm smooth" href="16T1-1,16,16-g0-graph.html">16T1-1,16,16-g0</a>
+      <a class="btn btn-sm smooth" href="16T1-8,16,16-g7-graph.html">16T1-8,16,16-g7</a>
+      <a class="btn btn-sm smooth" href="16T1-16,1,16-g0-graph.html">16T1-16,1,16-g0</a>
+      <a class="btn btn-sm smooth" href="16T1-16,16,2-g4-graph.html">16T1-16,16,2-g4</a>
+      <a class="btn btn-sm smooth" href="16T1-16,16,4-g6-graph.html">16T1-16,16,4-g6</a>
+      <a class="btn btn-sm smooth" href="16T1-16,8,16-g7-graph.html">16T1-16,8,16-g7</a>
+      <a class="btn btn-sm smooth" href="16T1-16,16,1-g0-graph.html">16T1-16,16,1-g0</a>
+      <a class="btn btn-sm smooth" href="16T1-2,16,16-g4-graph.html">16T1-2,16,16-g4</a>
+      <a class="btn btn-sm smooth" href="16T1-16,16,8-g7-graph.html">16T1-16,16,8-g7</a>
+    </div>
+    <div class="container">
+      <h3>16T4</h3>
+      <a class="btn btn-sm smooth" href="16T4-4,4,4-g3-graph.html">16T4-4,4,4-g3</a>
+    </div>
+    <div class="container">
+      <h3>16T5</h3>
+      <a class="btn btn-sm smooth" href="16T5-8,8,2-g3-graph.html">16T5-8,8,2-g3</a>
+      <a class="btn btn-sm smooth" href="16T5-4,8,8-g5-graph.html">16T5-4,8,8-g5</a>
+      <a class="btn btn-sm smooth" href="16T5-8,2,8-g3-graph.html">16T5-8,2,8-g3</a>
+      <a class="btn btn-sm smooth" href="16T5-8,4,8-g5-graph.html">16T5-8,4,8-g5</a>
+      <a class="btn btn-sm smooth" href="16T5-2,8,8-g3-graph.html">16T5-2,8,8-g3</a>
+      <a class="btn btn-sm smooth" href="16T5-8,8,4-g5-graph.html">16T5-8,8,4-g5</a>
+    </div>
+    <div class="container">
+      <h3>16T6</h3>
+      <a class="btn btn-sm smooth" href="16T6-8,8,4-g5-graph.html">16T6-8,8,4-g5</a>
+      <a class="btn btn-sm smooth" href="16T6-8,2,8-g3-graph.html">16T6-8,2,8-g3</a>
+      <a class="btn btn-sm smooth" href="16T6-4,8,8-g5-graph.html">16T6-4,8,8-g5</a>
+      <a class="btn btn-sm smooth" href="16T6-2,8,8-g3-graph.html">16T6-2,8,8-g3</a>
+      <a class="btn btn-sm smooth" href="16T6-8,4,8-g5-graph.html">16T6-8,4,8-g5</a>
+      <a class="btn btn-sm smooth" href="16T6-8,8,2-g3-graph.html">16T6-8,8,2-g3</a>
+    </div>
+    <div class="container">
+      <h3>16T8</h3>
+      <a class="btn btn-sm smooth" href="16T8-4,4,4-g3-graph.html">16T8-4,4,4-g3</a>
+    </div>
+    <div class="container">
+      <h3>16T10</h3>
+      <a class="btn btn-sm smooth" href="16T10-4,4,2-g1-graph.html">16T10-4,4,2-g1</a>
+      <a class="btn btn-sm smooth" href="16T10-2,4,4-g1-graph.html">16T10-2,4,4-g1</a>
+      <a class="btn btn-sm smooth" href="16T10-4,2,4-g1-graph.html">16T10-4,2,4-g1</a>
+    </div>
+    <div class="container">
+      <h3>16T12</h3>
+      <a class="btn btn-sm smooth" href="16T12-2,4,8-g2-graph.html">16T12-2,4,8-g2</a>
+      <a class="btn btn-sm smooth" href="16T12-4,2,8-g2-graph.html">16T12-4,2,8-g2</a>
+      <a class="btn btn-sm smooth" href="16T12-8,4,2-g2-graph.html">16T12-8,4,2-g2</a>
+      <a class="btn btn-sm smooth" href="16T12-4,8,2-g2-graph.html">16T12-4,8,2-g2</a>
+      <a class="btn btn-sm smooth" href="16T12-2,8,4-g2-graph.html">16T12-2,8,4-g2</a>
+      <a class="btn btn-sm smooth" href="16T12-8,2,4-g2-graph.html">16T12-8,2,4-g2</a>
+    </div>
+    <div class="container">
+      <h3>16T13</h3>
+      <a class="btn btn-sm smooth" href="16T13-2,2,8-g0-graph.html">16T13-2,2,8-g0</a>
+      <a class="btn btn-sm smooth" href="16T13-8,2,2-g0-graph.html">16T13-8,2,2-g0</a>
+      <a class="btn btn-sm smooth" href="16T13-2,8,2-g0-graph.html">16T13-2,8,2-g0</a>
+    </div>
+    <div class="container">
+      <h3>16T14</h3>
+      <a class="btn btn-sm smooth" href="16T14-8,4,4-g4-graph.html">16T14-8,4,4-g4</a>
+      <a class="btn btn-sm smooth" href="16T14-4,8,4-g4-graph.html">16T14-4,8,4-g4</a>
+      <a class="btn btn-sm smooth" href="16T14-4,4,8-g4-graph.html">16T14-4,4,8-g4</a>
+    </div>
+    <div class="container">
+      <h3>32S1</h3>
+      <a class="btn btn-sm smooth" href="32S1-32,1,32-g0-graph.html">32S1-32,1,32-g0</a>
+      <a class="btn btn-sm smooth" href="32S1-32,8,32-g14-graph.html">32S1-32,8,32-g14</a>
+      <a class="btn btn-sm smooth" href="32S1-16,32,32-g15-graph.html">32S1-16,32,32-g15</a>
+      <a class="btn btn-sm smooth" href="32S1-32,32,2-g8-graph.html">32S1-32,32,2-g8</a>
+      <a class="btn btn-sm smooth" href="32S1-32,16,32-g15-graph.html">32S1-32,16,32-g15</a>
+      <a class="btn btn-sm smooth" href="32S1-32,4,32-g12-graph.html">32S1-32,4,32-g12</a>
+      <a class="btn btn-sm smooth" href="32S1-8,32,32-g14-graph.html">32S1-8,32,32-g14</a>
+      <a class="btn btn-sm smooth" href="32S1-32,32,1-g0-graph.html">32S1-32,32,1-g0</a>
+      <a class="btn btn-sm smooth" href="32S1-32,2,32-g8-graph.html">32S1-32,2,32-g8</a>
+      <a class="btn btn-sm smooth" href="32S1-32,32,8-g14-graph.html">32S1-32,32,8-g14</a>
+      <a class="btn btn-sm smooth" href="32S1-32,32,4-g12-graph.html">32S1-32,32,4-g12</a>
+      <a class="btn btn-sm smooth" href="32S1-1,32,32-g0-graph.html">32S1-1,32,32-g0</a>
+      <a class="btn btn-sm smooth" href="32S1-4,32,32-g12-graph.html">32S1-4,32,32-g12</a>
+      <a class="btn btn-sm smooth" href="32S1-2,32,32-g8-graph.html">32S1-2,32,32-g8</a>
+      <a class="btn btn-sm smooth" href="32S1-32,32,16-g15-graph.html">32S1-32,32,16-g15</a>
+    </div>
+    <div class="container">
+      <h3>32S2</h3>
+      <a class="btn btn-sm smooth" href="32S2-4,4,4-g5-graph.html">32S2-4,4,4-g5</a>
+    </div>
+    <div class="container">
+      <h3>32S3</h3>
+      <a class="btn btn-sm smooth" href="32S3-8,8,4-g9-graph.html">32S3-8,8,4-g9</a>
+      <a class="btn btn-sm smooth" href="32S3-4,8,8-g9-graph.html">32S3-4,8,8-g9</a>
+      <a class="btn btn-sm smooth" href="32S3-8,4,8-g9-graph.html">32S3-8,4,8-g9</a>
+    </div>
+    <div class="container">
+      <h3>32S4</h3>
+      <a class="btn btn-sm smooth" href="32S4-4,8,8-g9-graph.html">32S4-4,8,8-g9</a>
+      <a class="btn btn-sm smooth" href="32S4-8,8,4-g9-graph.html">32S4-8,8,4-g9</a>
+      <a class="btn btn-sm smooth" href="32S4-8,4,8-g9-graph.html">32S4-8,4,8-g9</a>
+    </div>
+    <div class="container">
+      <h3>32S5</h3>
+      <a class="btn btn-sm smooth" href="32S5-8,8,4-g9-graph.html">32S5-8,8,4-g9</a>
+      <a class="btn btn-sm smooth" href="32S5-4,8,8-g9-graph.html">32S5-4,8,8-g9</a>
+      <a class="btn btn-sm smooth" href="32S5-8,8,2-g5-graph.html">32S5-8,8,2-g5</a>
+      <a class="btn btn-sm smooth" href="32S5-2,8,8-g5-graph.html">32S5-2,8,8-g5</a>
+      <a class="btn btn-sm smooth" href="32S5-8,2,8-g5-graph.html">32S5-8,2,8-g5</a>
+      <a class="btn btn-sm smooth" href="32S5-8,4,8-g9-graph.html">32S5-8,4,8-g9</a>
+    </div>
+    <div class="container">
+      <h3>32S6</h3>
+      <a class="btn btn-sm smooth" href="32S6-4,4,2-g1-graph.html">32S6-4,4,2-g1</a>
+      <a class="btn btn-sm smooth" href="32S6-2,4,4-g1-graph.html">32S6-2,4,4-g1</a>
+      <a class="btn btn-sm smooth" href="32S6-4,4,4-g5-graph.html">32S6-4,4,4-g5</a>
+      <a class="btn btn-sm smooth" href="32S6-4,2,4-g1-graph.html">32S6-4,2,4-g1</a>
+    </div>
+    <div class="container">
+      <h3>32S7</h3>
+      <a class="btn btn-sm smooth" href="32S7-8,2,8-g5-graph.html">32S7-8,2,8-g5</a>
+      <a class="btn btn-sm smooth" href="32S7-2,8,8-g5-graph.html">32S7-2,8,8-g5</a>
+      <a class="btn btn-sm smooth" href="32S7-8,8,2-g5-graph.html">32S7-8,8,2-g5</a>
+    </div>
+    <div class="container">
+      <h3>32S8</h3>
+      <a class="btn btn-sm smooth" href="32S8-4,8,8-g9-graph.html">32S8-4,8,8-g9</a>
+      <a class="btn btn-sm smooth" href="32S8-8,4,8-g9-graph.html">32S8-8,4,8-g9</a>
+      <a class="btn btn-sm smooth" href="32S8-8,8,4-g9-graph.html">32S8-8,8,4-g9</a>
+    </div>
+    <div class="container">
+      <h3>32S9</h3>
+      <a class="btn btn-sm smooth" href="32S9-8,4,2-g3-graph.html">32S9-8,4,2-g3</a>
+      <a class="btn btn-sm smooth" href="32S9-2,4,8-g3-graph.html">32S9-2,4,8-g3</a>
+      <a class="btn btn-sm smooth" href="32S9-8,2,4-g3-graph.html">32S9-8,2,4-g3</a>
+      <a class="btn btn-sm smooth" href="32S9-4,2,8-g3-graph.html">32S9-4,2,8-g3</a>
+      <a class="btn btn-sm smooth" href="32S9-2,8,4-g3-graph.html">32S9-2,8,4-g3</a>
+      <a class="btn btn-sm smooth" href="32S9-4,8,2-g3-graph.html">32S9-4,8,2-g3</a>
+    </div>
+    <br>
+  </body>
+</html>
